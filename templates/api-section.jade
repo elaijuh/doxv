@@ -3,7 +3,7 @@ section.api-ct(id='api-' + api.basename)
 		span.label.label-success= api.basename
 	each comment in api.comments
 		if comment.ignore
-			continue
+			- continue;
 		if comment.ctx
 			.api-ct-name(id=api.basename + '-' + comment.ctx.receiver + '-' + comment.ctx.name)
 				h3

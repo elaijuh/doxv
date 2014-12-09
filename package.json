@@ -4,12 +4,11 @@
   "description": "JavaScript documentation generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\"",
     "release": "grunt release"
   },
   "bin": {
-    "doxv": "bin/doxv",
-    "doxv-biuld": "bin/doxv-build"
+    "doxv": "bin/doxv"
   },
   "repository": {
     "type": "git",

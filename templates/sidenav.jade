@@ -16,7 +16,7 @@ ul.nav.nav-list.bs-docs-sidenav.affix
 							ul.api-sidenav-comment
 								each comment in api.comments
 									if comment.ignore
-										continue
+										- continue;
 									if comment.ctx
 										li
 											a(href='#' + api.basename + '-' + comment.ctx.receiver + '-' + comment.ctx.name)
