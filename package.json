@@ -1,0 +1,27 @@
+{
+  "name": "doxv",
+  "version": "0.0.1",
+  "description": "JavaScript documentation generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "grunt release"
+  },
+  "bin": {
+    "doxv": "bin/doxv",
+    "doxv-biuld": "bin/doxv-build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elaijuh/doxv.git"
+  },
+  "dependencies": {
+    "dox": "*",
+    "commander": "*",
+    "marked": "*",
+    "jade": "*",
+    "ncp": "*"
+  },
+  "devDependencies": {},
+  "author": "Jiale Hu"
+}

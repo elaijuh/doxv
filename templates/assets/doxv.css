@@ -1,0 +1,41 @@
+.bs-docs-sidenav.affix {
+  top: 70px;
+}
+
+.bs-docs-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+.doc-title {
+	margin-bottom: 50px;
+}
+
+
+.api-sidenav {
+	margin-bottom: 20px;
+}
+.api-sidenav-dir {
+	margin-right: 2px;
+}
+.api-sidenav-name {
+	margin: 5px 10px;
+}
+.api-sidenav-comment {
+	list-style: none;
+	padding-left: 0;
+}
+
+.api-ct {
+	padding-top: 50px;
+	margin-bottom: 70px;
+}
+.api-ct-name{
+	padding-top: 55px;
+}
+
+#accordion .panel-title .glyphicon-chevron-right,  .glyphicon-chevron-down{
+	float: right;
+	opacity: .25;
+}

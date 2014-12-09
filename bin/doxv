@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var program = require('commander'),
+    doxv = require('../');
+
+
+program
+    .version(doxv.version)
+    .option('-o, --output <path>', 'destination of generated html, default to be ./doc')
+    .option('-i, --input <path>', 'location of source js, default to be ./');
+
+program
+    .command('build')
+    .description('generate api document')
+    .action(function () {
+        doxv.process(program.input, program.output);
+    });
+
+program
+    .command('*')
+    .description('doxv')
+    .action(function () {
+        program.help();
+    });
+
+if (process.argv.length === 2) {
+    program.help();
+    process.exit();
+}
+
+// parse argv
+program.parse(process.argv);

@@ -1,0 +1,56 @@
+section.api-ct(id='api-' + api.basename)
+	h1
+		span.label.label-success= api.basename
+	each comment in api.comments
+		if comment.ignore
+			continue
+		if comment.ctx
+			.api-ct-name(id=api.basename + '-' + comment.ctx.receiver + '-' + comment.ctx.name)
+				h3
+					span.label.label-default= comment.ctx.name
+		if comment.description
+			| !{comment.description.full}
+		table.table.table-striped.table-bordered.table-condensed
+			if comment.ctx
+				tr
+					td= comment.ctx.type
+					td= comment.ctx.string
+					td= comment.ctx.receiver
+					td= comment.ctx.name
+			each tag in comment.tags
+				case tag.type
+					when 'return'
+						tr
+							td= tag.type
+							td(colspan='2')= tag.types && tag.types.join(',')
+							td!= tag.description
+					when 'param'
+						tr
+							td= tag.type
+							td= tag.name
+							td= tag.types && tag.types.join(',')
+							td!= tag.description
+					when 'api'
+						tr
+							td= tag.type
+							td(colspan='3')= tag.visibility
+					when 'example'
+						tr
+							td= tag.type
+							td(colspan='3')
+								pre
+									code= tag.string
+					when 'exception'
+						tr
+							td= tag.type
+							td(colspan='3')= tag.string
+					when 'callmethod'
+						tr
+							td= tag.type
+							td(colspan='3')= tag.string
+					default
+						tr
+							td= tag.type
+							td= tag.name
+							td= tag.types && tag.types.join(',')
+							td= tag.description

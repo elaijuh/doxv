@@ -1,0 +1,9 @@
+extends ./layout.jade
+
+block content
+	.container
+		h1.doc-title
+			span.label.label-default= doc.name
+		.doc-content!= doc.content
+
+

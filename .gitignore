@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+tmp
+.idea
+*.iml
+.DS_Store
+
+doc/*.html
+doc/assets

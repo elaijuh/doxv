@@ -1,0 +1,10 @@
+extends ./layout.jade
+
+block content
+	.container
+		.row
+			.col-md-3.bs-docs-sidebar
+				include ./sidenav.jade
+			.col-md-9
+				each api, idx in apis
+					include ./api-section.jade

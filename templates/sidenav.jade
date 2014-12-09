@@ -1,0 +1,23 @@
+ul.nav.nav-list.bs-docs-sidenav.affix
+	each api, idx in apis
+		li.api-sidenav
+			each dir, idx in api.dirs
+				span.label.label-primary.api-sidenav-dir= dir + ' >'
+			.panel-group(id='accordion', role='tablist', aria-multiselectable='true')
+				.panel.panel-default
+					.panel-heading(role='tab', id='heading'+api.basename)
+						h4.panel-title
+							a(href='#api-' + api.basename)
+								span.label.label-success= api.basename
+							a.toggle-accordion(data-toggle='collapse', data-parent='#accordion', href='#collapse'+api.basename, aria-expanded='true', aria-controls='collapse'+api.basename)
+								span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+					.panel-collapse.collapse(id='collapse'+api.basename, role='tabpanel', aria-labelledby='heading'+api.basename)
+						.panel-body
+							ul.api-sidenav-comment
+								each comment in api.comments
+									if comment.ignore
+										continue
+									if comment.ctx
+										li
+											a(href='#' + api.basename + '-' + comment.ctx.receiver + '-' + comment.ctx.name)
+												span.label.label-default= comment.ctx.name
