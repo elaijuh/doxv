@@ -5,6 +5,7 @@
  */
 
 var program = require('commander'),
+    path = require('path'),
     doxv = require('../');
 
 
@@ -18,6 +19,7 @@ program
     .description('generate api document')
     .action(function () {
         doxv.process(program.input, program.output);
+        console.log('View the document at: ', path.resolve(program.output || 'doc', 'index.html'));
     });
 
 program
