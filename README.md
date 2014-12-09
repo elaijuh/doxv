@@ -1,4 +1,4 @@
-# Doxv
+# Doxv [![Build Status](https://travis-ci.org/elaijuh/doxv.svg?branch=master)](https://travis-ci.org/elaijuh/doxv)
 Doxv is a JavaScript documentation generator based on [Dox](https://github.com/tj/dox). It visualizes APIs and markdown files for your components.
 
 ## Installation
@@ -11,7 +11,7 @@ The example shows how to generate documentation for doxv itself.
 ```
 $ git clone https://github.com/elaijuh/doxv.git
 $ cd ./doxv
-$ doxv build
+$ doxv build -i lib
 // done! now you can view -> ./doxv/doc/index.html
 ```
 

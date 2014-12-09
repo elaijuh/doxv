@@ -4,12 +4,16 @@
   "description": "JavaScript documentation generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No test specified\"",
-    "release": "grunt release"
+    "test": "echo \"No test specified\""
   },
   "bin": {
     "doxv": "bin/doxv"
   },
+  "keywords": [
+    "documentation",
+    "dox",
+    "jsdoc"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/elaijuh/doxv.git"
