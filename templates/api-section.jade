@@ -1,11 +1,11 @@
-section.api-ct(id='api-' + api.basename)
+section.api-section(id='api-' + api.basename)
 	h1
 		span.label.label-success= api.basename
 	each comment in api.comments
-		if comment.ignore
+		if comment.ignore === undefined || comment.ignore === true
 			- continue;
 		if comment.ctx
-			.api-ct-name(id=api.basename + '-' + comment.ctx.receiver + '-' + comment.ctx.name)
+			.api-section-name(id=api.basename + '-' + comment.ctx.receiver + '-' + comment.ctx.name)
 				h3
 					span.label.label-default= comment.ctx.name
 		if comment.description

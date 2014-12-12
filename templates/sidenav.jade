@@ -15,7 +15,7 @@ ul.nav.nav-list.bs-docs-sidenav.affix
 						.panel-body
 							ul.api-sidenav-comment
 								each comment in api.comments
-									if comment.ignore
+									if comment.ignore === undefined || comment.ignore === true
 										- continue;
 									if comment.ctx
 										li

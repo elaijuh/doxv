@@ -27,12 +27,15 @@
 	padding-left: 0;
 }
 
-.api-ct {
+.api-section {
 	padding-top: 50px;
 	margin-bottom: 70px;
 }
-.api-ct-name{
+.api-section-name{
 	padding-top: 55px;
+}
+.api-section table tr td:first-child {
+	font-weight: bold;
 }
 
 #accordion .panel-title .glyphicon-chevron-right,  .glyphicon-chevron-down{

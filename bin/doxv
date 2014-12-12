@@ -13,7 +13,7 @@ program
     .version(doxv.version)
     .option('-o, --output <path>', 'destination of generated html, default to be ./doc')
     .option('-i, --input <path>', 'location of source js, default to be ./')
-    .option('-e --exclude <path>', 'directories to be excluded');
+    .option('-e, --exclude <path>', 'directories to be excluded');
 
 program
     .command('build')
