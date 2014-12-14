@@ -1,8 +1,9 @@
 ul.nav.nav-list.bs-docs-sidenav.affix
 	each api, idx in apis
 		li.api-sidenav
-			each dir, idx in api.dirs
-				span.label.label-primary.api-sidenav-dir= dir + ' >'
+			.api-sidenav-dirs
+				each dir, idx in api.dirs
+					span.label.label-primary.api-sidenav-dir= dir + ' >'
 			.panel-group(id='accordion', role='tablist', aria-multiselectable='true')
 				.panel.panel-default
 					.panel-heading(role='tab', id='heading'+api.basename)

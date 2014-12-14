@@ -1,3 +1,8 @@
+.bs-docs-sidenav {
+	width: 265px;
+	height: 800px;
+	overflow-y: auto;
+}
 .bs-docs-sidenav.affix {
   top: 70px;
 }
@@ -16,6 +21,9 @@
 .api-sidenav {
 	margin-bottom: 20px;
 }
+.api-sidenav-dirs {
+	overflow: auto;
+}
 .api-sidenav-dir {
 	margin-right: 2px;
 }
@@ -25,6 +33,10 @@
 .api-sidenav-comment {
 	list-style: none;
 	padding-left: 0;
+}
+
+.api-sidenav a:hover {
+	color: white;
 }
 
 .api-section {
