@@ -13,13 +13,14 @@ program
     .version(doxv.version)
     .option('-o, --output <path>', 'destination of generated html, default to be ./doc')
     .option('-i, --input <path>', 'location of source js, default to be ./')
-    .option('-e, --exclude <path>', 'directories to be excluded');
+    .option('-e, --exclude <path>', 'directories to be excluded')
+    .option('-c, --css <path>', 'css file to include');
 
 program
     .command('build')
     .description('generate api document')
     .action(function () {
-        doxv.process(program.input, program.output, program.exclude);
+        doxv.process(program.input, program.output, program.exclude, program.css);
         console.log('View the document at: ', path.resolve(program.output || 'doc', 'index.html'));
     });
 

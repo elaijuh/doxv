@@ -5,5 +5,4 @@ tmp
 *.iml
 .DS_Store
 
-doc/*.html
-doc/assets
+doc
